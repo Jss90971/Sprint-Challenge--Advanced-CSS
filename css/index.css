@@ -282,11 +282,16 @@ footer {
 }
 @media (max-width: 500px) {
   .walk {
-    display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    width: 100%;
+    border: 1px solid red;
   }
   .walk .walk-text {
-    max-width: 100%;
+    width: 100%;
+    border: 1px solid red;
+  }
+  .walk .walk-img {
+    width: 100%;
   }
 }
