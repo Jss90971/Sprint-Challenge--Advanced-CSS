@@ -59,14 +59,6 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
-    @media @phone {
-      .walk {
-        display: flex;
-        flex-flow: column;
-        width: 100%;
-        border: 1px solid red;
-      }
-    }
 
     .walk-text {
       width: 50%;
@@ -82,14 +74,12 @@
       .btn {
         background-color: @header-font-color;
         border: 1px solid black;
-        height: 13%;
-        width: 30%;
+        .height-adjuster();
         color: white;
         border: 1px solid black;
         border-radius: 9px;
         font-size: 1.8em;
-        border-style: hidden;
-        text-align: center;
+        .custom-layout(hidden, center)
         &:hover {
           background-color: darken(grey, 5%)
         }
@@ -129,4 +119,17 @@
     margin-right: auto;
     width: 100%;
   }
+}
+@media @phone {
+  .walk {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    .walk-text{
+      max-width: 100%;
+    }
+  }
+}
+@media @phone {
+
 }

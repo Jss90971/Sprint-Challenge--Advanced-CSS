@@ -230,14 +230,6 @@ footer {
   display: flex;
   justify-content: center;
 }
-@media (max-width: 500px) {
-  .home .walk .walk {
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    border: 1px solid red;
-  }
-}
 .home .walk .walk-text {
   width: 50%;
 }
@@ -255,10 +247,8 @@ footer {
   border: 1px solid black;
   border-radius: 9px;
   font-size: 1.8em;
-  border-style: hidden;
-  text-align: center;
 }
-.home .walk .walk-text .btn:hover {
+.custom-layout(hidden, center) .home .walk .walk-text .btn:hover {
   background-color: #737373;
 }
 .home .walk .walk-img {
@@ -288,5 +278,15 @@ footer {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .walk {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .walk .walk-text {
+    max-width: 100%;
   }
 }
