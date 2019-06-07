@@ -1,4 +1,5 @@
 // Home Content
+@phone: ~"(max-width: 500px)";
 
 .home {
 
@@ -97,9 +98,31 @@
       }
     }
   }
+  @media @phone {
+    .home {
+      width: 100%;
+     .walk {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+        .walk-text{
+          width: 100%;
+          text-align: center;
+          padding-top: 10px;
+        .btn {
+          width: 100%;
+          height: 50px;
+          }
+        }
+        .walk-img {
+          width: 100%;
+          height:auto;
+        }
+      }
+    }
+  }
 }// home
 
-@phone: ~"(max-width: 500px)";
 
  .header {
   display: flex;
@@ -118,20 +141,5 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-  }
-}
-@media @phone {
-  .walk {
-      flex-direction: column-reverse;
-      align-items: center;
-      width: 100%;
-      border: 1px solid red;
-      .walk-text{
-        width: 100%;
-        border: 1px solid red;
-      }
-      .walk-img {
-        width: 100%;
-      }
   }
 }
